@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Kumbh+Sans"
+    />
+    <script defer src="script.js"></script>
+    <title>Page title</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="navbar">
+          <img
+            src="images/icon-menu.svg"
+            alt="hamburgerMenu"
+            class="menu"
+            onclick="openMenu()"
+          />
+
+          <img src="images/logo.svg" alt="e-commerce logo" />
+          <ul class="navMenu">
+            <li><a class="navList" href="#">Collections</a></li>
+            <li><a class="navList" href="#">Men</a></li>
+            <li><a class="navList" href="#">Women</a></li>
+            <li><a class="navList" href="#">About</a></li>
+            <li><a class="navList" href="#">Contact</a></li>
+          </ul>
+        </div>
+        <ul class="mobile-nav-menu">
+          <img
+            src="images/icon-close.svg"
+            alt="close mobile menu"
+            class="close-menu"
+            onclick="closeMenu()"
+          />
+          <li><a class="navList" href="#">Collections</a></li>
+          <li><a class="navList" href="#">Men</a></li>
+          <li><a class="navList" href="#">Women</a></li>
+          <li><a class="navList" href="#">About</a></li>
+          <li><a class="navList" href="#">Contact</a></li>
+        </ul>
+        <div class="asideNav">
+          <div class="navCart">
+            <img
+              class="imgcart"
+              onclick="showCart() "
+              src="images/icon-cart.svg"
+              alt="cart icon"
+            />
+            <div onclick="showCart() " class="cartitems">
+              <span id="itemNumber">0</span>
+            </div>
+          </div>
+
+          <div class="avatar">
+            <img
+              src="images/image-avatar.png"
+              onclick="hideCart()"
+              alt="profile picture"
+            />
+          </div>
+          <div id="showcart" class="cartList">
+            <h3>Cart</h3>
+            <div class="cartContent">
+              <img src="images/image-product-1.jpg" alt="sneekers image" />
+              <div class="cartText">
+                <p>Fall Limited Edition Sneakers</p>
+                <p>$125.00 x 3 <strong class="black">$375.00</strong></p>
+              </div>
+              <img src="images/icon-delete.svg" alt="delete button" />
+            </div>
+            <a href="#" class="btn block"> Checkout </a>
+          </div>
+        </div>
+      </header>
+      <div class="mainContent">
+        <div class="productsImages">
+          <div class="mainImage">
+            <img src="images/image-product-1.jpg" alt="sneekers image" />
+          </div>
+          <div class="asideImage">
+            <img src="images/image-product-1.jpg" alt="sneekers image" />
+            <img src="images/image-product-2.jpg" alt="sneekers image" />
+            <img src="images/image-product-3.jpg" alt="sneekers image" />
+            <img src="images/image-product-4.jpg" alt="sneekers image" />
+          </div>
+        </div>
+        <div class="slider">
+          <span id="slide-1"></span>
+          <span id="slide-2"></span>
+          <span id="slide-3"></span>
+          <span id="slide-4"></span>
+
+          <div class="image-container">
+            <img
+              src="images/image-product-1.jpg"
+              class="slide"
+              width="500"
+              height="300"
+            />
+            <img
+              src="images/image-product-2.jpg"
+              class="slide"
+              width="500"
+              height="300"
+            />
+            <img
+              src="images/image-product-3.jpg"
+              class="slide"
+              width="500"
+              height="300"
+            />
+            <img
+              src="images/image-product-4.jpg"
+              class="slide"
+              width="500"
+              height="300"
+            />
+          </div>
+          <div class="buttons">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a>
+          </div>
+        </div>
+        <div class="productDetails">
+          <p class="smallHeader">Sneaker Company</p>
+          <h1 class="bigHeader">Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <p class="bold">
+              $125.00
+              <span>50%</span>
+            </p>
+            <p class="light">$250.00</p>
+          </div>
+          <div class="cart">
+            <div class="addCart">
+              <img
+                src="images/icon-minus.svg"
+                onclick="decrement()"
+                alt="minus icon"
+              />
+              <span id="itemcount">0</span>
+              <img
+                src="images/icon-plus.svg"
+                onclick="increment()"
+                alt="plus icon"
+              />
+            </div>
+            <a href="#" class="btn" onclick="addItem()">
+              <img src="images/icon-cart.svg" alt="cart icon" />
+              Add to cart
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      Challenge by Frontend Mentor. Coded by <a href="#">Abdullahi Bashir</a>
+    </footer>
+  </body>
+</html>
