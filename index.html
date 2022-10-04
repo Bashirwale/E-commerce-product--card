@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://fonts.google.com/specimen/Kumbh+Sans"
     />
-    <script defer src="script.js"></script>
+
     <title>Page title</title>
   </head>
   <body>
@@ -44,37 +44,18 @@
           <li><a class="navList" href="#">Contact</a></li>
         </ul>
         <div class="asideNav">
-          <div class="navCart">
-            <img
-              class="imgcart"
-              onclick="showCart() "
-              src="images/icon-cart.svg"
-              alt="cart icon"
-            />
-            <div onclick="showCart() " class="cartitems">
-              <span id="itemNumber">0</span>
-            </div>
+          <div id="navCart">
+            <img class="imgcart" src="images/icon-cart.svg" alt="cart icon" />
           </div>
 
           <div class="avatar">
             <img
               src="images/image-avatar.png"
-              onclick="hideCart()"
+              id="showcart"
               alt="profile picture"
             />
           </div>
-          <div id="showcart" class="cartList">
-            <h3>Cart</h3>
-            <div class="cartContent">
-              <img src="images/image-product-1.jpg" alt="sneekers image" />
-              <div class="cartText">
-                <p>Fall Limited Edition Sneakers</p>
-                <p>$125.00 x 3 <strong class="black">$375.00</strong></p>
-              </div>
-              <img src="images/icon-delete.svg" alt="delete button" />
-            </div>
-            <a href="#" class="btn block"> Checkout </a>
-          </div>
+          <div id="cartList"></div>
         </div>
       </header>
       <div class="mainContent">
@@ -147,17 +128,13 @@
             <div class="addCart">
               <img
                 src="images/icon-minus.svg"
-                onclick="decrement()"
+                id="decrement"
                 alt="minus icon"
               />
               <span id="itemcount">0</span>
-              <img
-                src="images/icon-plus.svg"
-                onclick="increment()"
-                alt="plus icon"
-              />
+              <img src="images/icon-plus.svg" id="increment" alt="plus icon" />
             </div>
-            <a href="#" class="btn" onclick="addItem()">
+            <a href="#" class="btn" id="addItem">
               <img src="images/icon-cart.svg" alt="cart icon" />
               Add to cart
             </a>
@@ -168,5 +145,6 @@
     <footer>
       Challenge by Frontend Mentor. Coded by <a href="#">Abdullahi Bashir</a>
     </footer>
+    <script defer src="script.js"></script>
   </body>
 </html>
